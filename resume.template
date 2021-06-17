@@ -1,9 +1,11 @@
 <!doctype html>
-<html>
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, user-scalable=no, minimal-ui">
-
+		<meta name="viewport" content="width=device-width, minimal-ui">
+		{{#if resume.basics.summary}}
+		<meta name="description" content="{{{resume.basics.summary}}}">
+		{{/if}}
 		<title>{{#resume.basics}}{{name}}'s Resume{{/resume.basics}}</title>
 		<link href="https://fonts.googleapis.com/css?family=Merriweather:400,300,700" rel="stylesheet" type="text/css">
 		<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600" rel="stylesheet" type="text/css">
@@ -62,7 +64,7 @@
 									{{#if website}}
 										<ul>
 											<li>Website</li>
-											<li><a href="{{website}}">{{website}}</a></li>
+											<li><a href="{{website}}" rel="noopener">{{website}}</a></li>
 										</ul>
 									{{/if}}
 								</div>
@@ -156,7 +158,7 @@
 											{{#each profiles}}
 												{{#if network}}
 													<li>
-													<a href="{{url}}" target="_blank">
+													<a href="{{url}}" target="_blank" rel="noopener">
 														<i class="fa fa-2x {{fontAwesome network}}"></i>
 														<span class="network">{{network}}</span>
 													</a>
@@ -180,7 +182,7 @@
 											{{#if network}}
 											<ul>
 												<li>{{network}}</li>
-												<li><a href="{{url}}">{{#no-http}}{{url}}{{/no-http}}</a></li>
+												<li><a href="{{url}}" rel="noopener">{{#no-http}}{{url}}{{/no-http}}</a></li>
 											</ul>
 											{{/if}}
 										{{/each}}
@@ -235,7 +237,7 @@
 											<p class="small-center">
 										{{/if}}
 												{{#if website}}
-													<strong>{{position}}</strong> at <strong><a href="{{website}}" class="no-nl">{{company}}</a></strong>
+													<strong>{{position}}</strong> at <strong><a href="{{website}}" class="no-nl" rel="noopener">{{company}}</a></strong>
 												{{else}}
 													<strong>{{position}}</strong> at <strong>{{company}}</strong>
 												{{/if}}
@@ -263,7 +265,7 @@
 														<p class="small-center">
 													{{/if}}
 															{{#if website}}
-																<strong>{{position}}</strong> at <strong><a href="{{website}}" class="no-nl">{{company}}</a></strong>
+																<strong>{{position}}</strong> at <strong><a href="{{website}}" class="no-nl" rel="noopener">{{company}}</a></strong>
 															{{else}}
 																<strong>{{position}}</strong> at <strong>{{company}}</strong>
 															{{/if}}
@@ -400,7 +402,7 @@
 												<p class="small-center">
 											{{/if}}
 											{{#if website}}
-												<strong>{{role}}</strong> <span class="no-nl">of <strong><a href="{{website}}">{{name}}</a></strong></span>
+												<strong>{{role}}</strong> <span class="no-nl">of <strong><a href="{{website}}" rel="noopener">{{name}}</a></strong></span>
 											{{else}}
 												<strong>{{role}}</strong> <span class="no-nl">of <strong>{{name}}</strong></span>
 											{{/if}}
@@ -453,7 +455,7 @@
 											<p class="small-center">
 										{{/if}}
 												{{#if website}}
-													<strong>{{position}}</strong> <span class="no-nl">at <strong><a href="{{website}}">{{organization}}</a></strong></span>
+													<strong>{{position}}</strong> <span class="no-nl">at <strong><a href="{{website}}" rel="noopener">{{organization}}</a></strong></span>
 												{{else}}
 													<strong>{{position}}</strong> <span class="no-nl">at <strong>{{organization}}</strong></span>
 												{{/if}}

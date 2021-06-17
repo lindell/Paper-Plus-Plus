@@ -49,4 +49,12 @@
   .top-content h3{
     width: 100px;
   }
+
+  .summary p{
+    margin-left: 1em;
+  }
+
+  .work-listing p {
+    margin-left: 1em;
+  }
 }
