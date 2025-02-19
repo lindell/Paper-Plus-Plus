@@ -13,7 +13,7 @@
 
   .content-wrapper{
     padding-left: 1%;
-    padding-right: 1%;
+    padding-right: max(1%, 1rem);
   }
 
   .profiles-listing ul li, .profiles-listing ul li:first-child{
